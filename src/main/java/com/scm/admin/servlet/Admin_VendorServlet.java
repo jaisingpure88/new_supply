@@ -91,7 +91,7 @@ public class Admin_VendorServlet extends HttpServlet {
 		List<Vendor> vendors = adminVendorDbUtil.getVendors();
 		request.setAttribute("Vendor_LIST", vendors);
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher("admin/list-vendors.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("admin/vendor.jsp");
 		dispatcher.forward(request, response);
 	}
 

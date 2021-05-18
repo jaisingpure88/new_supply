@@ -61,7 +61,7 @@ public class Admin_UserServlet extends HttpServlet {
 				List<Euser> users = adminUserDbUtil.getUsers();
 				request.setAttribute("User_LIST", users);
 				
-				RequestDispatcher dispatcher = request.getRequestDispatcher("admin/list-users.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("admin/customer.jsp");
 				dispatcher.forward(request, response);
 	}
 	/**

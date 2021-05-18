@@ -14,21 +14,25 @@
 
 			<thead>
 				<tr>
-					<th scope="col">Product ID</th>
-					<th scope="col">Product Name</th>
-					<th scope="col">Product Description</th>
-					<th scope="col">Product Price</th>
-				</tr>
+				<th>Vendor ID</th>
+				<th>Vendor Name</th>
+				<th>Vendor City</th>
+				<th>Remove</th>
+			</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="tempProduct" items="${Product_LIST}">
-					<tr>
-						<td>${tempProduct.productID}</td>
-						<td>${tempProduct.productName}</td>
-						<td>${tempProduct.productDisc}</td>
-						<td>${tempProduct.productPrice}</td>
-					</tr>
-				</c:forEach>
+					<c:forEach var="tempVendor" items="${Vendor_LIST}">
+				<c:url var="deleteLink" value="Admin_VendorServlet">
+					<c:param name="command" value="DELETE"></c:param>
+					<c:param name="vrndorID" value="${tempVendor.vrndorID}"></c:param>
+				</c:url>
+				<tr>
+					<td>${tempVendor.vrndorID}</td>
+					<td>${tempVendor.vendorName}</td>
+					<td>${tempVendor.vendorCity}</td>
+					<td><a href="${deleteLink}">Delete</a></td>
+				</tr>
+			</c:forEach>
 			</tbody>
 		</table>
 

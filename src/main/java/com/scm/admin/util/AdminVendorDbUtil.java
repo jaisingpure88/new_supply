@@ -40,7 +40,7 @@ public class AdminVendorDbUtil {
 			int vendorId =myRs.getInt("VrndorID");
 			String vendorName = myRs.getString("VendorName");
 			String vendorCity = myRs.getString("VendorCity");
-		
+		 
 			Vendor tempVendor = new Vendor(vendorId,vendorName,vendorCity);
 			
 			vendors.add(tempVendor);

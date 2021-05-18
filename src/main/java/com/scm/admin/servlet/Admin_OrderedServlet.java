@@ -1,7 +1,6 @@
 package com.scm.admin.servlet;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -12,20 +11,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import com.scm.admin.util.AdminOrderedDbUtil;
 import com.scm.admin.util.AdminProductDbUtil;
+import com.scm.model.Ordered;
 import com.scm.model.Product;
 
 /**
- * Servlet implementation class AdminProductServlet
+ * Servlet implementation class Admin_OrderedServlet
  */
-
-public class AdminProductServlet extends HttpServlet {
+public class Admin_OrderedServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Default constructor.
+	 * @see HttpServlet#HttpServlet()
 	 */
-	public AdminProductServlet() {
+	public Admin_OrderedServlet() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
@@ -33,7 +34,7 @@ public class AdminProductServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	private AdminProductDbUtil adminProductDbUtil;
+	private AdminOrderedDbUtil adminOrderedDbUtil;
 	@Resource(name = "jdbc/supplychainmanagement")
 	private DataSource dataSource;
 
@@ -42,7 +43,7 @@ public class AdminProductServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		super.init();
 		try {
-			adminProductDbUtil = new AdminProductDbUtil(dataSource);
+			adminOrderedDbUtil = new AdminOrderedDbUtil(dataSource);
 		} catch (Exception e) {
 			// TODO: handle exception
 			throw new ServletException(e);
@@ -51,22 +52,22 @@ public class AdminProductServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		try {
-			
-			listProducts(request, response);
+
+			listOrdered(request, response);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	
-	private void listProducts(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	private void listOrdered(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
-		List<Product> products = adminProductDbUtil.getProducts();
-		request.setAttribute("Product_LIST", products);
+		List<Ordered> ordered = adminOrderedDbUtil.getOrdered();
+		request.setAttribute("Ordered_LIST", ordered);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("admin/home.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("admin/orders.jsp");
 		dispatcher.forward(request, response);
 	}
 

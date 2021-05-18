@@ -13,22 +13,26 @@
 			cellspacing="0" class="table table-striped">
 
 			<thead>
-				<tr>
-					<th scope="col">Product ID</th>
-					<th scope="col">Product Name</th>
-					<th scope="col">Product Description</th>
-					<th scope="col">Product Price</th>
-				</tr>
+			<tr>
+				<th scope="col">Product ID</th>
+				<th scope="col">Product Name</th>
+				<th scope="col">User Name</th>
+				<th scope="col">Total Price</th>
+				<th scope="col">OrderdDate</th>
+				<th scope="col">DeliverDate</th>
+			</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="tempProduct" items="${Product_LIST}">
-					<tr>
-						<td>${tempProduct.productID}</td>
-						<td>${tempProduct.productName}</td>
-						<td>${tempProduct.productDisc}</td>
-						<td>${tempProduct.productPrice}</td>
-					</tr>
-				</c:forEach>
+				<c:forEach var="tempOrdered" items="${Ordered_LIST}">
+				<tr>
+					<td>${tempOrdered.productID}</td>
+					<td>${tempOrdered.productName}</td>
+					<td>${tempOrdered.userName}</td>
+					<td>${tempOrdered.totalPrice}</td>
+					<td>${tempOrdered.orderDate}</td>
+					<td>${tempOrdered.deliveryDate}</td>
+				</tr>
+			</c:forEach>
 			</tbody>
 		</table>
 

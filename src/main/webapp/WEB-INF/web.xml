@@ -88,6 +88,12 @@
 		<description></description>
 		<servlet-class>com.scm.admin.servlet.Admin_VendorServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Admin_OrderedServlet</servlet-name>
+		<display-name>Admin_OrderedServlet</display-name>
+		<description></description>
+		<servlet-class>com.scm.admin.servlet.Admin_OrderedServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>adminlogin</servlet-name>
@@ -144,6 +150,10 @@
 	<servlet-mapping>
 		<servlet-name>Admin_VendorServlet</servlet-name>
 		<url-pattern>/Admin_VendorServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Admin_OrderedServlet</servlet-name>
+		<url-pattern>/Admin_OrderedServlet</url-pattern>
 	</servlet-mapping>
    <resource-ref>
 		<description>MySQL Datasource example</description>
