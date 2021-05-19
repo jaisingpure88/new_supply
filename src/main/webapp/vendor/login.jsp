@@ -27,7 +27,7 @@
 							name="VendorPassword" class="form-control">
 					</div>
 					<button type="submit" class="btn btn-primary">Login</button>
-					<a class="btn btn-primary" href="register.jsp" role="button">Register</a>
+					
 
 				</form>
 

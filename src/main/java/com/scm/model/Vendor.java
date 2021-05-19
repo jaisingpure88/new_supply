@@ -24,6 +24,12 @@ public class Vendor {
 		VendorCity = vendorCity;
 	}
 
+	public Vendor(String vendorName2, String vendorCity2, String vendorPassword2) {
+		VendorName = vendorName2;
+		VendorPassword = vendorCity2;
+		VendorCity = vendorPassword2;
+		// TODO Auto-generated constructor stub
+	}
 	public int getVrndorID() {
 		return VrndorID;
 	}

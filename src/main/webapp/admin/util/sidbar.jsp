@@ -14,7 +14,7 @@
 								Welcome
 						</a></li>
 
-						<li class="nav-item"><a class="nav-link" href="#"> <span
+						<li class="nav-item"><a class="nav-link" href="Admin_UserServlet"> <span
 								data-feather="users"></span> Customers
 						</a></li>
 					</ul>
@@ -27,12 +27,12 @@
 						</a>
 					</h6>
 					<ul class="nav flex-column mb-2">
-						<li class="nav-item"><a class="nav-link" href="#"> <span
+						<li class="nav-item"><a class="nav-link" href="Admin_OrderedServlet"> <span
 								data-feather="file-text"></span> Orders
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span
+					<!-- 	<li class="nav-item"><a class="nav-link" href="#"> <span
 								data-feather="file-text"></span> Orders History
-						</a></li>
+						</a></li>  -->
 					</ul>
 					<h6
 						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -42,10 +42,10 @@
 						</a>
 					</h6>
 					<ul class="nav flex-column mb-2">
-						<li class="nav-item"><a class="nav-link" href="#"> <span
+						<li class="nav-item"><a class="nav-link" href="AdminProductServlet"> <span
 								data-feather="file-text"></span> Products
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span
+						<li class="nav-item"><a class="nav-link" href="addProducts.jsp"> <span
 								data-feather="file-text"></span> add Products
 						</a></li>
 					</ul>
@@ -57,10 +57,10 @@
 						</a>
 					</h6>
 					<ul class="nav flex-column mb-2">
-						<li class="nav-item"><a class="nav-link" href="#"> <span
+						<li class="nav-item"><a class="nav-link" href="Admin_VendorServlet"> <span
 								data-feather="file-text"></span> Vendor
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="#"> <span
+						<li class="nav-item"><a class="nav-link" href="addVendor.jsp"> <span
 								data-feather="file-text"></span> add Vendor
 						</a></li>
 

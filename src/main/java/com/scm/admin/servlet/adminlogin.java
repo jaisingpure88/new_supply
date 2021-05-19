@@ -22,9 +22,10 @@ public class adminlogin extends HttpServlet {
 			boolean auth = AdminAthuntiacater.validate(AdminName, AdminPassword);
 			if (auth) {
 				session.setAttribute("AUTH", true);
-				request.getRequestDispatcher("/adminhome").forward(request, response);
+//				request.getRequestDispatcher("/adminhome").forward(request, response);
+				response.sendRedirect("admin/home.jsp");
 			} else {
-				response.sendRedirect("vendor/login.jsp");
+				response.sendRedirect("admin/login.jsp");
 				session.setAttribute("ERROR", "Athuentication Fail");
 			}
 		} catch (Exception e) {

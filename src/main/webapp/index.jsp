@@ -11,7 +11,7 @@
 				<form>
 				<div class=" d-grid gap-2 col-6 mx-auto">
 					<a class="btn  btn-secondary active btn-lg" href="user/register.jsp" role="button">User</a><br></br>
-					<a class="btn  btn-secondary active btn-lg" href="vendor/register.jsp" role="button">Vendor</a><br></br>
+					<a class="btn  btn-secondary active btn-lg" href="vendor/login.jsp" role="button">Vendor</a><br></br>
 					<a class="btn  btn-secondary active btn-lg" href="admin/login.jsp" role="button">Admin</a><br></br>
 				</div>
 				</form>

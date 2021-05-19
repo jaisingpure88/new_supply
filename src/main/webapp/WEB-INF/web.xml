@@ -94,6 +94,24 @@
 		<description></description>
 		<servlet-class>com.scm.admin.servlet.Admin_OrderedServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>vendorlogin</servlet-name>
+		<display-name>vendorlogin</display-name>
+		<description></description>
+		<servlet-class>com.scm.admin.servlet.vendorlogin</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>addProducts</servlet-name>
+		<display-name>addProducts</display-name>
+		<description></description>
+		<servlet-class>com.scm.admin.servlet.addProducts</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>vendorRegister</servlet-name>
+		<display-name>vendorRegister</display-name>
+		<description></description>
+		<servlet-class>com.scm.admin.servlet.vendorRegister</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>adminlogin</servlet-name>
@@ -154,6 +172,18 @@
 	<servlet-mapping>
 		<servlet-name>Admin_OrderedServlet</servlet-name>
 		<url-pattern>/Admin_OrderedServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>vendorlogin</servlet-name>
+		<url-pattern>/vendorlogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>addProducts</servlet-name>
+		<url-pattern>/addProducts</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>vendorRegister</servlet-name>
+		<url-pattern>/vendorRegister</url-pattern>
 	</servlet-mapping>
    <resource-ref>
 		<description>MySQL Datasource example</description>

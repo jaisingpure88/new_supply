@@ -18,6 +18,15 @@ public class Product {
 		ProductDisc = productDisc;
 		ProductPrice = productPrice;
 	}
+	
+
+	public Product(String productName2, String description, int price) {
+		// TODO Auto-generated constructor stub
+		ProductName = productName2;
+		ProductDisc = description;
+		ProductPrice = price;
+	}
+
 
 	public int getProductID() {
 		return ProductID;
