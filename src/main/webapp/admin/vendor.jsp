@@ -30,7 +30,7 @@
 					<td>${tempVendor.vrndorID}</td>
 					<td>${tempVendor.vendorName}</td>
 					<td>${tempVendor.vendorCity}</td>
-					<td><a href="${deleteLink}">Delete</a></td>
+					<td><a href="${deleteLink}" onclick="if (!(confirm('Are you sure you want to Delete this ${tempVendor.vendorName} ?'))) return false">Delete</a></td>
 				</tr>
 			</c:forEach>
 			</tbody>

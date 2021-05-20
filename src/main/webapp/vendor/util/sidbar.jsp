@@ -29,7 +29,7 @@
 						</a>
 					</h6>
 					<ul class="nav flex-column mb-2">
-						<li class="nav-item"><a class="nav-link" href="VendorProduct"> <span
+						<li class="nav-item"><a class="nav-link" href="http://localhost:8081/supplychainmanagement/VendorProduct"> <span
 								data-feather="file-text"></span> Vendor Stock
 						</a></li>
 						<li class="nav-item"><a class="nav-link" href="/supplychainmanagement/vendor/addVendorProduct.jsp"> <span
