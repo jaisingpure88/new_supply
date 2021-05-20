@@ -17,14 +17,24 @@
 				<th>User ID</th>
 				<th>User Name</th>
 				<th>User City</th>
+				<th>Action</th>
 			</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="tempUser" items="${User_LIST}">
+				<c:url var="deleteLink" value="Admin_UserServlet">
+						<c:param name="command" value="DELETE" />
+						<c:param name="userID" value="${tempUser.userID}" />
+					</c:url>
 				<tr>
 					<td>${tempUser.userID }</td>
 					<td>${tempUser.userName }</td>
 					<td>${tempUser.userCity }</td>
+					<td> 
+							<a href="${deleteLink}"
+							onclick="if (!(confirm('Are you sure you want to delete this ${tempUser.userName} ?'))) return false">
+							Delete</a>	
+						</td>
 				</tr>
 			</c:forEach>
 			</tbody>

@@ -1,7 +1,9 @@
 package com.scm.admin.util;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -68,5 +70,35 @@ public class AdminUserDbUtil {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+	}
+
+	public void deleteStudent(String theUserId) throws SQLException {
+		// TODO Auto-generated method stub
+		Connection myConn = null;
+		PreparedStatement myStmt = null;
+		
+		try {
+			// convert student id to int
+			int userId = Integer.parseInt(theUserId);
+			
+			// get connection to database
+			myConn = dataSource.getConnection();
+			
+			// create sql to delete student
+			String sql = "delete from euser where UserID=?";
+			
+			// prepare statement
+			myStmt = myConn.prepareStatement(sql);
+			
+			// set params
+			myStmt.setInt(1, userId);
+			
+			// execute sql statement
+			myStmt.execute();
+		}
+		finally {
+			// clean up JDBC code
+			close(myConn, myStmt, null);
+		}	
 	}
 }

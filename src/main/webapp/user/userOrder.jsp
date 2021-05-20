@@ -16,25 +16,19 @@
 				<tr>
 					<th scope="col">Product ID</th>
 					<th scope="col">Product Name</th>
-					<th scope="col">Product Price</th>
-					<th scope="col">Quantity</th>
-					<th scope="col">Update Stock</th>
+					<th scope="col">Total Price</th>
+					<th scope="col">Order Date</th>
+					<th scope="col">Delivery Date</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="tempProduct" items="${VendorProduct_LIST}">
-				<c:url var="tempLink" value="VendorProduct">
-						<c:param name="command" value="LOAD" />
-						<c:param name="productID" value="${tempProduct.productID}" />
-					</c:url>
+				<c:forEach var="tempProduct" items="${UserOrdered_LIST}">
 					<tr>
 						<td>${tempProduct.productID}</td>
 						<td>${tempProduct.productName}</td>
-						<td>${tempProduct.productPrice}</td>
-						<td>${tempProduct.quantity}</td>
-						<td> 
-							<a href="${tempLink}">Update</a> 
-						</td>
+						<td>${tempProduct.totalPrice}</td>
+						<td>${tempProduct.orderDate}</td>
+						<td>${tempProduct.deliveryDate}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

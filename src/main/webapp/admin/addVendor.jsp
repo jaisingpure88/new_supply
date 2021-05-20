@@ -6,7 +6,7 @@
 	
 			<div class="col-md-8 col-lg-10 d-md-block bg-light sidebar collapse" style="float: left;">
 
-				<form action="vendorRegister" method="post">
+				<form action="/vendorRegister" method="post">
 					<div>
 						<h3>Vendor Register</h3>
 					</div>

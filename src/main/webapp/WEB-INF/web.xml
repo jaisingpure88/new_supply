@@ -112,11 +112,24 @@
 		<description></description>
 		<servlet-class>com.scm.admin.servlet.vendorRegister</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>userOrderServlet</servlet-name>
+		<display-name>userOrderServlet</display-name>
+		<description></description>
+		<servlet-class>com.scm.admin.servlet.userOrderServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>userProductDisplay</servlet-name>
+		<display-name>userProductDisplay</display-name>
+		<description></description>
+		<servlet-class>com.scm.admin.servlet.userProductDisplay</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>adminlogin</servlet-name>
 		<url-pattern>/adminlogin</url-pattern>
 	</servlet-mapping>
+	
 	<servlet-mapping>
 		<servlet-name>userlogin</servlet-name>
 		<url-pattern>/userlogin</url-pattern>
@@ -184,6 +197,14 @@
 	<servlet-mapping>
 		<servlet-name>vendorRegister</servlet-name>
 		<url-pattern>/vendorRegister</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>userOrderServlet</servlet-name>
+		<url-pattern>/userOrderServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>userProductDisplay</servlet-name>
+		<url-pattern>/userProductDisplay</url-pattern>
 	</servlet-mapping>
    <resource-ref>
 		<description>MySQL Datasource example</description>

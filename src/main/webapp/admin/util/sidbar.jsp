@@ -45,9 +45,9 @@
 						<li class="nav-item"><a class="nav-link" href="AdminProductServlet"> <span
 								data-feather="file-text"></span> Products
 						</a></li>
-						<li class="nav-item"><a class="nav-link" href="addProducts.jsp"> <span
+					<!--  	<li class="nav-item"><a class="nav-link" href="addProducts.jsp"> <span
 								data-feather="file-text"></span> add Products
-						</a></li>
+						</a></li> -->
 					</ul>
 					<h6
 						class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

@@ -5,7 +5,7 @@
 			<div
 				class="cal-12 bg-dark text-light d-flex justify-content-center align-items-center"
 				style="height: 100vh">
-				<form action="adminlogin" method="post">
+				<form action="http://localhost:8081/supplychainmanagement/alogin" method="post" >
 				    <div>
 						<h3>Admin Login</h3>
 					</div>

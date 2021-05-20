@@ -7,6 +7,9 @@ public class Ordered {
 	private int totalPrice;
 	private String orderDate;
 	private String deliveryDate;
+	private int userID;
+	private int quantity;
+	private int Ordered;
 	
 	public Ordered(int productID, String productName, String userName, int totalPrice, String orderDate,
 			String deliveryDate) {
@@ -18,7 +21,42 @@ public class Ordered {
 		this.orderDate = orderDate;
 		this.deliveryDate = deliveryDate;
 	}
+	
 
+	public Ordered( int userID,int productID,int quantity, int totalPrice,int ordered, String orderDate, String deliveryDate) {
+		super();
+		this.productID = productID;
+		this.totalPrice = totalPrice;
+		this.orderDate = orderDate;
+		this.deliveryDate = deliveryDate;
+		this.userID = userID;
+		this.quantity = quantity;
+		this.Ordered = ordered;
+	}
+
+
+	public int getOrdered() {
+		return Ordered;
+	}
+
+
+	public void setOrdered(int ordered) {
+		Ordered = ordered;
+	}
+
+
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public int getUserID() {
+		return userID;
+	}
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
 	public int getProductID() {
 		return productID;
 	}
@@ -67,11 +105,16 @@ public class Ordered {
 		this.deliveryDate = deliveryDate;
 	}
 
+
 	@Override
 	public String toString() {
 		return "Ordered [productID=" + productID + ", productName=" + productName + ", userName=" + userName
-				+ ", totalPrice=" + totalPrice + ", orderDate=" + orderDate + ", deliveryDate=" + deliveryDate + "]";
+				+ ", totalPrice=" + totalPrice + ", orderDate=" + orderDate + ", deliveryDate=" + deliveryDate
+				+ ", userID=" + userID + ", quantity=" + quantity + ", Ordered=" + Ordered + "]";
 	}
+	
+
+
 
 	
 }
